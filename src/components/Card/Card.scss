@@ -1,0 +1,28 @@
+@mixin card-container {
+  width: 340px;
+  height: 340px;
+  position: relative;
+  margin-top: 56px;
+  margin-right: 60px;
+  cursor: pointer;
+
+  .card-img {
+    height: 340px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .card-title {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    line-height: 26px;
+  }
+}
+
+.card-container {
+  @include card-container;
+}

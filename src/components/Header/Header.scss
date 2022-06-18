@@ -1,0 +1,20 @@
+header {
+  padding-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  a {
+    color: #ff6060;
+    font-weight: 500;
+    font-size: 24px;
+
+    &:last-child {
+      margin-left: 57px;
+    }
+
+    &:hover {
+      text-decoration-line: underline;
+    }
+  }
+}

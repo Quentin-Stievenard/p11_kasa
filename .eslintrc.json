@@ -1,0 +1,55 @@
+{
+  "extends": ["plugin:react/recommended", "plugin:prettier/recommended"],
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["react"],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "moduleDirectory": ["node_modules", "src/"],
+        "paths": ["src"],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto",
+        "singleQuote": true
+      }
+    ],
+    // Ici vous définissez vos règles de syntaxe
+    // Retrouvez les règles sur la documentation d'ESLint
+    "import/no-named-as-default": "off",
+    "no-unused-vars": "warn",
+    "no-console": "off",
+    "no-shadow": "off",
+    "no-process-exit": "off",
+    "object-shorthand": "off",
+    "class-methods-use-this": "off",
+    "semi": [2, "always"],
+    "import/prefer-default-export": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/label-has-associated-control": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "react/no-array-index-key": "off",
+    "no-plusplus": "off",
+    "func-names": "off",
+
+    // Seulement si c'est un projet React
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "prefer-destructuring": ["error", { "object": true, "array": false }],
+    "react/jsx-one-expression-per-line": "off"
+  }
+}

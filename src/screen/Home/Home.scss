@@ -1,0 +1,33 @@
+@mixin home-cover {
+  margin-top: 63px;
+
+  .header-home-cover {
+    position: relative;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .title-home {
+    position: absolute;
+    top: 36%;
+    left: 28%;
+    font-size: 48px;
+    font-weight: 500;
+    color: white;
+  }
+  .home-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 43px;
+    flex-wrap: wrap;
+    background-color: #f6f6f6;
+    border-radius: 25px;
+  }
+}
+
+.home-cover {
+  @include home-cover;
+}
