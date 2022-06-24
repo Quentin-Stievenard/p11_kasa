@@ -5,14 +5,17 @@ import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import Home from './screen/Home/Home';
 import Appartement from './screen/Appartement/Appartement';
 
+import About from './screen/About/About';
+import NotFound from './screen/NotFound/NotFound';
+
 //data
 import data from './data.json';
-import About from './screen/About/About';
 
 export default function Router() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="*" element={<NotFound />} />
         <Route exact path="/" element={<Home />} />
         <Route
           path="/appartement/:id"

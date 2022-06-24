@@ -1,0 +1,23 @@
+@mixin not-found-container {
+  .not-found-text {
+    font-size: 36px;
+    color: #ff6060;
+  }
+
+  .not-found-title {
+    font-size: 288px;
+    font-weight: 700;
+    color: #ff6060;
+  }
+
+  a {
+    color: #ff6060;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 182px;
+  }
+}
+
+.not-found-container {
+  @include not-found-container;
+}
