@@ -6,6 +6,7 @@ import './About.scss';
 // components
 import Header from '../../components/Header/Header';
 import Dropdown from '../../components/Dropdown/Dropdown';
+import Footer from '../../components/Footer/Footer';
 
 // image
 import aboutBG from '../../images/aboutBG.svg';
@@ -34,21 +35,24 @@ export default function About() {
     },
   ];
   return (
-    <main>
-      <Header />
-      <img className="w-full mt-11" src={aboutBG} />
-      <div className="flex flex-col items-center mt-8">
-        {textAbout.map((dropdown, i) => {
-          return (
-            <Dropdown
-              className="dropdown-about mt-8"
-              key={i}
-              title={dropdown.title}
-              description={dropdown.description}
-            />
-          );
-        })}
-      </div>
-    </main>
+    <div>
+      <main className="mb-16">
+        <Header />
+        <img className="w-full mt-11" src={aboutBG} />
+        <div className="flex flex-col items-center mt-8">
+          {textAbout.map((dropdown, i) => {
+            return (
+              <Dropdown
+                className="dropdown-about mt-8"
+                key={i}
+                title={dropdown.title}
+                description={dropdown.description}
+              />
+            );
+          })}
+        </div>
+      </main>
+      <Footer />
+    </div>
   );
 }

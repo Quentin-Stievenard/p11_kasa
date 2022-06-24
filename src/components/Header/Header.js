@@ -7,12 +7,18 @@ import './Header.scss';
 import logo from '../../images/LOGO.svg';
 
 export default function Header() {
+  const url = window.location.pathname.split('/')[1];
+
   return (
     <header>
       <img src={logo} alt="logo kasa" />
       <div>
-        <a href="/">Accueil</a>
-        <a href="/about">A Propos</a>
+        <a href="/" className={`${url === '' ? 'underline' : ''}`}>
+          Accueil
+        </a>
+        <a href="/about" className={`${url === 'about' ? 'underline' : ''}`}>
+          A Propos
+        </a>
       </div>
     </header>
   );

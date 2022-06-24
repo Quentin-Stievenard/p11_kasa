@@ -9,6 +9,7 @@ import Header from '../../components/Header/Header';
 import Avatar from '../../components/Avatar/Avatar';
 import Tag from '../../components/Tag/Tag';
 import { Icon } from '@iconify/react';
+import Footer from '../../components/Footer/Footer';
 
 // icones
 import starFill from '@iconify/icons-eva/star-fill';
@@ -36,47 +37,49 @@ export default function Appartement({ dataProps }) {
   };
 
   return (
-    <main>
-      <Header />
-
-      <section className="appartement-container">
-        <img className="img-appartement" src={data.cover} />
-        <div className="flex items-center justify-between pt-8">
-          <div>
-            <p className="appartement-title">{data.title}</p>
-            <p className="appartement-location">{data.location}</p>
+    <div>
+      <main>
+        <Header />
+        <section className="appartement-container">
+          <img className="img-appartement" src={data.cover} />
+          <div className="flex items-center justify-between pt-8">
+            <div>
+              <p className="appartement-title">{data.title}</p>
+              <p className="appartement-location">{data.location}</p>
+            </div>
+            <div className="flex items-center justify-center flex-wrap">
+              <p className="w-24">{data.host.name}</p>
+              <Avatar imgProfil={data.host.picture} />
+            </div>
           </div>
-          <div className="flex items-center justify-center flex-wrap">
-            <p className="w-24">{data.host.name}</p>
-            <Avatar imgProfil={data.host.picture} />
+          <div className="flex items-center justify-between">
+            <div className="flex items-center">
+              {data.tags.map((tag, i) => {
+                return <Tag className="mt-5" key={i} text={tag} />;
+              })}
+            </div>
+            <div className="flex items-center">
+              <StarsComponent numberOfHighlitedStars={data.rating} />
+            </div>
           </div>
-        </div>
-        <div className="flex items-center justify-between">
-          <div className="flex items-center">
-            {data.tags.map((tag, i) => {
-              return <Tag className="mt-5" key={i} text={tag} />;
-            })}
+          <div className="flex items-top justify-between mt-6 pb-48">
+            <Dropdown
+              className="equipement"
+              title="Equipement"
+              description={data.equipments.map((equipment, i) => {
+                return <p key={i}>{equipment}</p>;
+              })}
+            />
+            <Dropdown
+              className="description"
+              title="Description"
+              description={data.description}
+            />
           </div>
-          <div className="flex items-center">
-            <StarsComponent numberOfHighlitedStars={data.rating} />
-          </div>
-        </div>
-        <div className="flex items-center justify-between mt-6 relative">
-          <Dropdown
-            className="equipement"
-            title="Equipement"
-            description={data.equipments.map((equipment, i) => {
-              return <p key={i}>{equipment}</p>;
-            })}
-          />
-          <Dropdown
-            className="description"
-            title="Description"
-            description={data.description}
-          />
-        </div>
-      </section>
-    </main>
+        </section>
+      </main>
+      <Footer />
+    </div>
   );
 }
 
