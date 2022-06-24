@@ -26,6 +26,9 @@ export default function Home() {
           {appartements.map((appartement, i) => {
             return (
               <Card
+                onClick={() => {
+                  window.location = `/appartement/${appartement.id}`;
+                }}
                 className="card"
                 key={i}
                 imgAppartement={appartement.cover}

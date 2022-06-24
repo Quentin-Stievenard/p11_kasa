@@ -1,0 +1,59 @@
+@mixin appartement-container {
+  width: 100%;
+  padding-top: 20px;
+  .img-appartement {
+    width: 100%;
+    height: 415px;
+    object-fit: cover;
+    border-radius: 25px;
+  }
+
+  .appartement-title {
+    color: #ff6060;
+    font-size: 36px;
+    font-weight: 500;
+  }
+
+  .appartement-location {
+    font-size: 18px;
+    font-weight: 500;
+    color: #ff6060;
+  }
+
+  svg {
+    width: 30px;
+    height: 30px;
+    margin-right: 7px;
+
+    &:nth-child(5) {
+      margin-right: 0;
+    }
+  }
+
+  .red-star {
+    color: #ff6060;
+  }
+
+  .grey-star {
+    color: #e3e3e3;
+  }
+
+  .equipement,
+  .description {
+    width: 650px;
+    position: absolute;
+    top: 0;
+  }
+
+  .equipement p {
+    width: 250px;
+  }
+
+  .description {
+    right: 0;
+  }
+}
+
+.appartement-container {
+  @include appartement-container;
+}

@@ -1,0 +1,23 @@
+@mixin tag-container {
+  background-color: #ff6060;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 3px 22px;
+
+  margin-left: 10px;
+
+  &:nth-child(1) {
+    margin-left: 0;
+  }
+
+  p {
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+  }
+}
+
+.tag-container {
+  @include tag-container;
+}

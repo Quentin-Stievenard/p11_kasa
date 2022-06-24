@@ -1,0 +1,7 @@
+@mixin dropdown-about {
+  width: 1026px;
+}
+
+.dropdown-about {
+  @include dropdown-about;
+}

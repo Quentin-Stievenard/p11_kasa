@@ -6,6 +6,10 @@
   margin-right: 60px;
   cursor: pointer;
 
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
   .card-img {
     height: 340px;
     object-fit: cover;

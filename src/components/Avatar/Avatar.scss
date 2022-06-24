@@ -1,0 +1,13 @@
+@mixin avatar {
+  margin-left: 10px;
+  img {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 64px;
+    height: 64px;
+  }
+}
+
+.avatar {
+  @include avatar;
+}
