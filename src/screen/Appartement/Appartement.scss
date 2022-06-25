@@ -50,6 +50,57 @@
   .description {
     right: 0;
   }
+
+  .host-name {
+    font-size: 18px;
+    color: #ff6060;
+  }
+
+  .appartement-resp {
+    display: none;
+  }
+
+  @media (max-width: 599px) {
+    .dropdown-container {
+      flex-direction: column;
+      width: 100%;
+
+      .equipement {
+        margin-bottom: 20px;
+      }
+    }
+    .host-name {
+      font-size: 12px;
+      width: 51px;
+    }
+    .img-appartement {
+      height: 255px;
+    }
+
+    .appartment-desktop {
+      display: none;
+    }
+
+    .appartement-resp {
+      display: block;
+      .appartement-title {
+        font-size: 18px;
+      }
+
+      .appartement-location {
+        font-size: 14px;
+      }
+    }
+    svg {
+      width: 15px;
+      height: 15px;
+      margin-right: 3.5px;
+
+      &:nth-child(5) {
+        margin-right: 0;
+      }
+    }
+  }
 }
 
 .appartement-container {
