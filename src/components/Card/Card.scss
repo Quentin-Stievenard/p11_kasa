@@ -25,6 +25,15 @@
     color: white;
     line-height: 26px;
   }
+
+  @media (max-width: 599px) {
+    margin-right: 0 !important;
+    margin-top: 20px;
+
+    &:first-child {
+      margin-top: 0 !important;
+    }
+  }
 }
 
 .card-container {

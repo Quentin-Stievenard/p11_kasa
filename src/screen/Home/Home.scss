@@ -8,6 +8,10 @@
     }
   }
 
+  .bg-responsive {
+    display: none;
+  }
+
   .title-home {
     position: absolute;
     top: 36%;
@@ -26,16 +30,32 @@
     border-radius: 25px;
     padding-bottom: 56px;
   }
+
+  @media (max-width: 599px) {
+    margin-top: 16px;
+
+    .header-home-cover {
+      .bg-desktop {
+        display: none;
+      }
+
+      .bg-responsive {
+        display: block;
+        object-fit: cover;
+      }
+    }
+    .title-home {
+      font-size: 24px;
+      left: 5%;
+      top: 20%;
+    }
+    .home-card {
+      background-color: white;
+      margin-top: 20px;
+    }
+  }
 }
 
 .home-cover {
   @include home-cover;
 }
-
-@media (max-width: 599px) {
-  .header-home-cover {
-    img {
-      width: 145px;
-    }
-  }
-} ;

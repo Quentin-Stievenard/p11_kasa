@@ -9,6 +9,7 @@ import Card from '../../components/Card/Card';
 
 // images
 import bg from '../../images/homeBG.svg';
+import bgResp from '../../images/homeResp.svg';
 
 // data
 import appartements from '../../data.json';
@@ -21,7 +22,12 @@ export default function Home() {
         <Header />
         <section className="home-cover">
           <div className="header-home-cover">
-            <img src={bg} alt="image de background" />
+            <img className="bg-desktop" src={bg} alt="image de background" />
+            <img
+              className="bg-responsive"
+              src={bgResp}
+              alt="image de background responsive"
+            />
             <p className="title-home">Chez vous, partout et ailleurs</p>
           </div>
           <div className="home-card">
