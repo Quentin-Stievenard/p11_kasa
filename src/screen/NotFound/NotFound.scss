@@ -10,11 +10,31 @@
     color: #ff6060;
   }
 
-  a {
+  .link-notFound {
     color: #ff6060;
     font-size: 18px;
     font-weight: 500;
     margin-top: 182px;
+    text-transform: none;
+    margin-left: 0 !important;
+    text-decoration: underline;
+  }
+
+  @media (max-width: 599px) {
+    .not-found-title {
+      font-size: 96px;
+    }
+
+    .not-found-text {
+      font-size: 18px;
+      text-align: center;
+      width: 260px;
+    }
+
+    .link-notFound {
+      font-size: 14px !important;
+      margin-top: 133px;
+    }
   }
 }
 
