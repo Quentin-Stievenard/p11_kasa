@@ -27,6 +27,7 @@ export default function Appartement({ dataProps }) {
     for (let i = 0; i < 5; i++) {
       JSXArray.push(
         <Icon
+          key={i}
           icon={starFill}
           className={i < numberOfHighlitedStars ? 'red-star' : 'grey-star'}
         />
@@ -84,7 +85,7 @@ export default function Appartement({ dataProps }) {
               </div>
             </div>
           </section>
-          <div className="flex items-top justify-between mt-6 pb-48 dropdown-container">
+          <div className="flex items-top justify-between mt-6 pb-48 dropdown-appartement">
             <Dropdown
               className="equipement"
               title="Equipement"

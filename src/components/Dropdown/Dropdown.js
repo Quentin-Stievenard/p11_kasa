@@ -25,8 +25,8 @@ export default function Dropdown({ title, description, className }) {
         <Icon className="text-white" icon={arrowIosDownwardOutline} />
       </div>
       {deploy && (
-        <div className="description-container ">
-          <p className="flex flex-wrap">{description}</p>
+        <div className="description-container">
+          <div className="flex flex-wrap description">{description}</div>
         </div>
       )}
     </div>
@@ -35,7 +35,7 @@ export default function Dropdown({ title, description, className }) {
 
 Dropdown.propTypes = {
   title: PropTypes.string,
-  description: PropTypes.arrayOf(PropTypes.shape({})),
+  description: PropTypes.string,
   onClick: PropTypes.func,
   className: PropTypes.string,
 };

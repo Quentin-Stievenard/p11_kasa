@@ -1,7 +1,14 @@
-@mixin dropdown-about {
-  width: 1026px;
+@mixin about-container {
+  .dropdown-about {
+    width: 1026px;
+  }
+  @media (max-width: 599px) {
+    .dropdown-about {
+      width: 100% !important;
+    }
+  }
 }
 
-.dropdown-about {
-  @include dropdown-about;
+.about-container {
+  @include about-container;
 }

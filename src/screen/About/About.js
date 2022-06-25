@@ -35,7 +35,7 @@ export default function About() {
     },
   ];
   return (
-    <div>
+    <div className="about-container">
       <main className="mb-16">
         <Header />
         <img className="w-full mt-11" src={aboutBG} />

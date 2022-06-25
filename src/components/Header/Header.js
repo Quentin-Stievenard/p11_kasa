@@ -11,7 +11,9 @@ export default function Header() {
 
   return (
     <header>
-      <img className="logo-header" src={logo} alt="logo kasa" />
+      <a href="/">
+        <img className="logo-header" src={logo} alt="logo kasa" />
+      </a>
       <div>
         <a href="/" className={`${url === '' ? 'underline' : ''}`}>
           Accueil
