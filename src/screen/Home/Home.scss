@@ -3,10 +3,9 @@
 
   .header-home-cover {
     position: relative;
-  }
-
-  img {
-    width: 100%;
+    img {
+      width: 100%;
+    }
   }
 
   .title-home {
@@ -32,3 +31,11 @@
 .home-cover {
   @include home-cover;
 }
+
+@media (max-width: 599px) {
+  .header-home-cover {
+    img {
+      width: 145px;
+    }
+  }
+} ;

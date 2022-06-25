@@ -18,3 +18,21 @@ header {
     }
   }
 }
+
+@media (max-width: 599px) {
+  header {
+    width: 100%;
+  }
+  .logo-header {
+    width: 145px;
+  }
+
+  a {
+    font-size: 12px !important;
+    text-transform: uppercase;
+
+    &:last-child {
+      margin-left: 10px !important;
+    }
+  }
+}
