@@ -10,6 +10,11 @@ import { Icon } from '@iconify/react';
 // icones
 import arrowIosDownwardOutline from '@iconify/icons-eva/arrow-ios-downward-outline';
 
+/**
+ * @param  {string} {title}
+ * @param  {string} {description}
+ * @param  {string} {className}
+ */
 export default function Dropdown({ title, description, className }) {
   // ? Permet de deployer le dropdown au click sur le header
   const [deploy, setDeploy] = useState(false);

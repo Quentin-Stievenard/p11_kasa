@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 
 // scss
 import './Avatar.scss';
-
+/**
+ * @param  {image} {imgProfil}
+ */
 export default function Avatar({ imgProfil }) {
   return (
     <div className="avatar">

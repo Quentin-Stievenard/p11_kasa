@@ -10,7 +10,9 @@ import { Icon } from '@iconify/react';
 // icones
 import arrowIosBackOutline from '@iconify/icons-eva/arrow-ios-back-outline';
 import arrowIosForwardOutline from '@iconify/icons-eva/arrow-ios-forward-outline';
-
+/**
+ * @param  {Array} {images}
+ */
 export default function Carousel({ images }) {
   const [currentPicture, setCurrentPicture] = useState(0);
 

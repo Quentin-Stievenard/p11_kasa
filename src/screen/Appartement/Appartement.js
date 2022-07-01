@@ -15,7 +15,9 @@ import Footer from '../../components/Footer/Footer';
 import starFill from '@iconify/icons-eva/star-fill';
 import Dropdown from '../../components/Dropdown/Dropdown';
 import Carousel from '../../components/Carousel/Carousel';
-
+/**
+ * @param  {Array} {dataProps}
+ */
 export default function Appartement({ dataProps }) {
   const targetData = window.location.pathname.split('/')[2];
   const data = dataProps.filter(
