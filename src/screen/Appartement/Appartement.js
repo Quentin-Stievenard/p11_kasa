@@ -14,6 +14,7 @@ import Footer from '../../components/Footer/Footer';
 // icones
 import starFill from '@iconify/icons-eva/star-fill';
 import Dropdown from '../../components/Dropdown/Dropdown';
+import Carousel from '../../components/Carousel/Carousel';
 
 export default function Appartement({ dataProps }) {
   const targetData = window.location.pathname.split('/')[2];
@@ -37,12 +38,14 @@ export default function Appartement({ dataProps }) {
     return JSXArray.map((element) => element);
   };
 
+  console.log(data.pictures);
+
   return (
     <div>
       <main>
         <Header />
         <section className="appartement-container">
-          <img className="img-appartement" src={data.cover} />
+          <Carousel images={data.pictures} />
           <section className="appartment-desktop">
             <div className="flex items-center justify-between pt-8">
               <div>
@@ -85,7 +88,7 @@ export default function Appartement({ dataProps }) {
               </div>
             </div>
           </section>
-          <div className="flex items-top justify-between mt-6 pb-48 dropdown-appartement">
+          <div className="flex items-top justify-between mt-6 pb-24 dropdown-appartement">
             <Dropdown
               className="equipement"
               title="Equipement"
