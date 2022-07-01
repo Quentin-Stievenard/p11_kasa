@@ -26,6 +26,18 @@
     color: white;
     cursor: pointer;
   }
+
+  @media (max-width: 599px) {
+    .carousel-img {
+      width: 335px;
+      height: 255px !important;
+    }
+    .previous,
+    .next {
+      width: 38px;
+      height: 38px;
+    }
+  }
 }
 
 .carousel {

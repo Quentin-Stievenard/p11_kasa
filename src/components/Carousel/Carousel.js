@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 
 // scss
 import './Carousel.scss';
+
+// components
 import { Icon } from '@iconify/react';
 
 // icones
